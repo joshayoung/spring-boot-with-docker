@@ -1,3 +1,18 @@
 ./mvnw package && java -jar target/demo-0.0.1-SNAPSHOT.jar
 docker build -t springio/gs-spring-boot-docker .
 docker run -p 8080:8080 springio/gs-spring-boot-docker
+
+# Browse to http://localhost:8080 to see the app running.
+
+---
+
+#Build the container:
+docker build -t spring-java-test:1.0 .
+
+# Attach to the container:
+ docker run --rm -it -p 3000:3000 spring-java-test:1.0 bash
+
+ # From inside the container:
+ java -cp app:app/lib/* hello.Application
+
+ Browse to: http://localhost:8080/ to the app running
