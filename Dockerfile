@@ -2,7 +2,7 @@ FROM openjdk:11
 RUN groupadd spring
 RUN useradd -g spring spring
 RUN apt-get update
-RUN apt install -y maven vim
+RUN apt install -y maven vim tmux
 
 USER spring:spring
 VOLUME /tmp
